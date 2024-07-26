@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <h2>Acceuil</h2>
       <Link to="/FicheLogement">
-        <button type="button">Click Me!</button>
+        <button type="button">Fiche Logement</button>
       </Link>
     </>
   );
