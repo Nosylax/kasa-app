@@ -13,7 +13,7 @@ const Collapse = (props) => {
           className={`chevron ${!isCollapsed ? "rotate" : ""}`}
           onClick={() => setIsCollapsed(!isCollapsed)}
           src={chevron}
-          alt="Dépliez"
+          alt="Déplier"
         />
       </div>
       <div className={`dropdownOpen ${!isCollapsed ? "open" : ""}`}>
