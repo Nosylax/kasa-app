@@ -1,4 +1,18 @@
 .footer {
   height: 209px;
   background-color: black;
+  text-align: center;
+}
+
+.footerText {
+  color: white;
+  font-family: Montserrat;
+  font-weight: medium;
+  font-size: 24px;
+  margin: 0px;
+  margin-top: 28px;
+}
+
+.footerItems {
+  padding-top: 90px;
 }
