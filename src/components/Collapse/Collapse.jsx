@@ -1,0 +1,28 @@
+import React, { useState } from "react";
+import "./Collapse.css";
+import chevron from "../../assets/chevron-up-solid.svg";
+
+const Collapse = (props) => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  return (
+    <div>
+      <div className="dropdown">
+        <p className="dropdownTitle">{props.title}</p>
+        <img
+          className={`chevron ${!isCollapsed ? "rotate" : ""}`}
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          src={chevron}
+          alt="Dépliez"
+        />
+      </div>
+      <div className={`dropdownOpen ${!isCollapsed ? "open" : ""}`}>
+        {!isCollapsed && (
+          <div className="dropdownSubtitle">{props.subtitle}</div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Collapse;
