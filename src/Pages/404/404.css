@@ -1,0 +1,35 @@
+.notFoundTitle {
+  color: #ff6060;
+  font-size: 288px;
+  font-family: Montserrat;
+  font-weight: bold;
+  padding-left: 421px;
+  padding-right: 421px;
+  padding-top: 30px;
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+.notFoundText {
+  color: #ff6060;
+  font-size: 36px;
+  font-family: Montserrat;
+  font-weight: medium;
+  padding-left: 284px;
+  padding-right: 284px;
+  padding-bottom: 139px;
+  text-align: center;
+  margin: 0px;
+}
+
+.notFoundBack {
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: medium;
+  padding-left: 578px;
+  padding-right: 578px;
+  padding-bottom: 139px;
+  text-decoration: underline;
+  text-align: center;
+  margin: 0px;
+}

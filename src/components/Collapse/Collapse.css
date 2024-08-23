@@ -24,17 +24,11 @@
   margin-left: 208px;
   margin-right: 208px;
   margin-bottom: 30px;
-  transition: height 2s ease;
-  height: 0;
-  overflow: hidden;
-}
-
-.dropdownOpen.open {
-  height: auto;
 }
 
 .dropdownSubtitle {
   padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 20px;
   padding-top: 25px;
   font-family: Montserrat;
