@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Slideshow from "../../components/Slideshow/Slideshow";
+import "./AccommodationSheet.css";
+import Collapse from "../../components/Collapse/Collapse";
+
 import { useParams } from "react-router-dom";
 
 export default function AccommodationSheet() {
@@ -21,15 +23,53 @@ export default function AccommodationSheet() {
     };
 
     fetchData();
-  }, [param]); 
+  }, [param]);
   console.log(location);
- 
-    
+
   return (
     <>
-      {/* <div>
-        <Slideshow slide={location.pictures[0]}/>
-      </div> */}
+      {location.title !== undefined ? (
+        <div>
+          <div className="titleNamePicture">
+            <div className="locationTitle">
+              {location.title}
+              <p className="locationLocation">{location.location}</p>
+            </div>
+            <div className="HostAndPicture">
+              <div className="locationHostName">{location.host.name}</div>
+              <div>
+                <img
+                  className="locationHostPicture"
+                  src={location.host.picture}
+                  alt={`Portrait du propriétaire`}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="locationTags">
+            {location.tags.map((tag, locationTag) => (
+              <p className="locationTag" key={locationTag}>
+                {tag}
+              </p>
+            ))}
+          </div>
+          <div className="locationCollapses">
+            <Collapse title="Description" subtitle={location.description} />
+            <Collapse
+              title="Equipements"
+              subtitle={location.equipments.map(
+                (equipment, locationEquipment) => (
+                  <p className="locationEquipments" key={locationEquipment}>
+                    {equipment}
+                  </p>
+                )
+              )}
+            />
+          </div>
+        </div>
+      ) : (
+        <div />
+      )}
     </>
   );
-  }
+}
