@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./AccommodationSheet.css";
 import Collapse from "../../components/Collapse/Collapse";
-
+import Slideshow from "../../components/Slideshow/Slideshow";
 import { useParams } from "react-router-dom";
 
 export default function AccommodationSheet() {
@@ -30,6 +30,7 @@ export default function AccommodationSheet() {
     <>
       {location.title !== undefined ? (
         <div>
+          <Slideshow pictures={location.pictures} />
           <div className="titleNamePicture">
             <div className="locationTitle">
               {location.title}
@@ -37,9 +38,9 @@ export default function AccommodationSheet() {
             </div>
             <div className="HostAndPicture">
               <div className="locationHostName">{location.host.name}</div>
-              <div>
+              <div className="hostPictureBox">
                 <img
-                  className="locationHostPicture"
+                  className="hostPicture"
                   src={location.host.picture}
                   alt={`Portrait du propriétaire`}
                 />
