@@ -43,7 +43,7 @@ const Slideshow = ({ pictures }) => {
           onClick={nextSlide}
         />
         <p className="counter">
-          {currentIndex}/{pictures.length}
+          {currentIndex + 1}/{pictures.length}
         </p>
       </div>
     </div>

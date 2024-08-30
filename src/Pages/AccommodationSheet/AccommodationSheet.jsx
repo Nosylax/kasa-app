@@ -3,6 +3,7 @@ import "./AccommodationSheet.css";
 import Collapse from "../../components/Collapse/Collapse";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import { useParams } from "react-router-dom";
+// import StartRating from "../../components/Rating/Rating";
 
 export default function AccommodationSheet() {
   const param = useParams();
@@ -29,7 +30,7 @@ export default function AccommodationSheet() {
   return (
     <>
       {location.title !== undefined ? (
-        <div>
+        <div className="accommodationSheetContainer">
           <Slideshow pictures={location.pictures} />
           <div className="titleNamePicture">
             <div className="locationTitle">
@@ -53,6 +54,7 @@ export default function AccommodationSheet() {
                 {tag}
               </p>
             ))}
+            {/* <StartRating /> */}
           </div>
           <div className="locationCollapses">
             <Collapse title="Description" subtitle={location.description} />

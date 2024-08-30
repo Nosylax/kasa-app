@@ -1,8 +1,6 @@
 .dropdown {
   background-color: #ff6060;
   min-height: 52px;
-  margin-left: 208px;
-  margin-right: 208px;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -21,8 +19,6 @@
 
 .dropdownOpen {
   background-color: #f6f6f6;
-  margin-left: 208px;
-  margin-right: 208px;
   margin-bottom: 30px;
 }
 

@@ -6,7 +6,7 @@ const Collapse = (props) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <div>
+    <div className="dropdownWrapper">
       <div className="dropdown">
         <p className="dropdownTitle">{props.title}</p>
         <img
