@@ -33,3 +33,28 @@
   text-align: center;
   margin: 0px;
 }
+
+@media (max-width: 767.98px) {
+  .notFoundTitle {
+    font-size: 96px;
+    padding-left: 88.5px;
+    padding-right: 88.5px;
+  }
+  .notFoundText {
+    font-size: 18px;
+    padding-left: 57.5px;
+    padding-right: 57.5px;
+    padding-bottom: 113px;
+  }
+
+  .notFoundBack {
+    font-size: 14px;
+
+    padding-left: 77px;
+    padding-right: 77px;
+    padding-bottom: 139px;
+    text-decoration: underline;
+    text-align: center;
+    margin: 0px;
+  }
+}

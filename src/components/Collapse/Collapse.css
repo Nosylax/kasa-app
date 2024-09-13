@@ -41,3 +41,25 @@
 .chevron.rotate {
   transform: rotate(180deg);
 }
+@media (max-width: 1024px) {
+  .dropdown {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dropdownTitle {
+    font-size: 13px;
+  }
+  .chevron {
+    height: 9.14px;
+  }
+  .dropdownSubtitle {
+    font-size: 12px;
+    padding-top: 13px;
+  }
+  .dropdownOpen {
+    background-color: #f6f6f6;
+    margin-bottom: 20px;
+  }
+}

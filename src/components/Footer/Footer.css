@@ -14,5 +14,13 @@
 }
 
 .footerItems {
-  padding-top: 80px;
+  padding-top: 66px;
+}
+
+@media (max-width: 767.98px) {
+  .footerText {
+    font-size: 12px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }

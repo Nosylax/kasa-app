@@ -124,6 +124,17 @@
   }
   .locationCollapses {
     display: flex;
-    margin-bottom: 27px;
+    margin-bottom: 0px;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .titleNamePicture {
+    flex-direction: column;
+  }
+  .hostPicture {
+    width: 32px;
+  }
+  .accommodationSheetContainer .dropdownWrapper {
+    width: 100%;
   }
 }
