@@ -17,7 +17,6 @@
   color: white;
   font-family: Montserrat;
   font-weight: bold;
-  /* -webkit-text-stroke: 1px black; */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   position: absolute;
 }
@@ -28,4 +27,31 @@
   object-fit: cover;
   border-radius: 25px;
   filter: brightness(0.4);
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    height: 111px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 22px;
+    font-size: 24px;
+    border-radius: 10px;
+  }
+
+  .bannerTitle {
+    color: white;
+    font-family: Montserrat;
+    font-weight: bold;
+    box-shadow: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-right: 94px;
+    margin-left: 16px;
+  }
+
+  .bannerImage {
+    border-radius: 10px;
+  }
 }

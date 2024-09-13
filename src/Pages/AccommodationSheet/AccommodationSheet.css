@@ -40,6 +40,7 @@
 .locationCollapses {
   display: flex;
   gap: 76px;
+  margin-bottom: 25px;
 }
 
 .collapseDescription {
@@ -90,4 +91,39 @@
 
 .accommodationSheetContainer .dropdownWrapper {
   width: 50%;
+}
+
+@media (max-width: 767.98px) {
+  .accommodationSheetContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .accommodationSheetInfos {
+    display: flex;
+    flex-direction: column;
+  }
+  .locationTitle {
+    font-size: 18px;
+  }
+
+  .locationLocation {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .locationTag {
+    min-height: 18px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-bottom: 24px;
+    padding: 0 20px;
+  }
+
+  .locationHostName {
+    font-size: 12px;
+  }
+  .locationCollapses {
+    display: flex;
+    margin-bottom: 27px;
+  }
 }

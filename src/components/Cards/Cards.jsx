@@ -17,7 +17,7 @@ const Cards = () => {
     };
 
     fetchData();
-  }, []); // Le tableau vide [] signifie que l'effet s'exécute une seule fois après le montage du composant
+  }, []);
 
   return (
     <div className="locationContainer">
