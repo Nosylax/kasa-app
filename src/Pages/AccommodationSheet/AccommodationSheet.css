@@ -32,7 +32,7 @@
   font-size: 14px;
   font-family: Montserrat;
   font-weight: bold;
-
+  margin-top: 20px;
   margin-bottom: 24px;
   padding: 0 20px;
 }
@@ -67,9 +67,10 @@
   padding-right: 10px;
 }
 
-.titleNamePicture {
+.pictureAndRating {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .hostPicture {
@@ -82,6 +83,7 @@
 
 .HostAndPicture {
   display: flex;
+  margin-bottom: 21px;
 }
 
 .hostPictureBox {
@@ -93,15 +95,22 @@
   width: 50%;
 }
 
+.rating {
+  margin-bottom: 31px;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 @media (max-width: 767.98px) {
   .accommodationSheetContainer {
     margin-left: 20px;
     margin-right: 20px;
   }
-  .accommodationSheetInfos {
-    display: flex;
-    flex-direction: column;
-  }
+
   .locationTitle {
     font-size: 18px;
   }
@@ -115,7 +124,7 @@
     min-height: 18px;
     border-radius: 5px;
     font-size: 10px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     padding: 0 20px;
   }
 
@@ -136,5 +145,14 @@
   }
   .accommodationSheetContainer .dropdownWrapper {
     width: 100%;
+  }
+
+  .infos {
+    flex-direction: column;
+  }
+
+  .pictureAndRating {
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./AccommodationSheet.css";
 import Collapse from "../../components/Collapse/Collapse";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import { useParams } from "react-router-dom";
-// import StartRating from "../../components/Rating/Rating";
+import Rating from "../../components/Rating/Rating";
 
 export default function AccommodationSheet() {
   const param = useParams();
@@ -45,12 +45,21 @@ export default function AccommodationSheet() {
     <>
       <div className="accommodationSheetContainer">
         <Slideshow pictures={location.pictures} />
-        <div className="accommodationSheetInfos">
-          <div className="titleNamePicture">
+        <div className="infos">
+          <div>
             <div className="locationTitle">
               {location.title}
               <p className="locationLocation">{location.location}</p>
             </div>
+            <div className="locationTags">
+              {location.tags.map((tag, locationTag) => (
+                <p className="locationTag" key={locationTag}>
+                  {tag}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="pictureAndRating">
             <div className="HostAndPicture">
               <div className="locationHostName">{location.host.name}</div>
               <div className="hostPictureBox">
@@ -61,15 +70,8 @@ export default function AccommodationSheet() {
                 />
               </div>
             </div>
+            <Rating rating={location.rating} />
           </div>
-        </div>
-        <div className="locationTags">
-          {location.tags.map((tag, locationTag) => (
-            <p className="locationTag" key={locationTag}>
-              {tag}
-            </p>
-          ))}
-          {/* <StartRating /> */}
         </div>
         <div>
           <div className="locationCollapses">

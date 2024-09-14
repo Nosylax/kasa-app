@@ -1,11 +1,21 @@
-// import React, { useState } from 'react';
+import "./Rating.css";
+import emptyStar from "../../assets/star.png";
+import star from "../../assets/starcompleted.png";
 
-// const StarRating = () => {
-//     const [rating, setRating] = useState(0);
+const Rating = ({ rating }) => {
+  const stars = [];
 
-// return (
+  for (let i = 1; i <= 5; i++) {
+    const starImg =
+      i <= rating ? (
+        <img key={i} src={star} alt="Etoile pleine" />
+      ) : (
+        <img key={i} src={emptyStar} alt="Etoile vide" />
+      );
+    stars.push(starImg);
+  }
 
-// )
-// }
+  return <div className="rating">{stars}</div>;
+};
 
-// export default StarRating;
+export default Rating;
