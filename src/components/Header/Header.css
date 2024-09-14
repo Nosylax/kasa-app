@@ -40,6 +40,10 @@
     text-transform: uppercase;
   }
 
+  .navigationItems {
+    gap: 26px;
+  }
+
   .navigationItems a:hover {
     text-decoration: underline;
     cursor: pointer;

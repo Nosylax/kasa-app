@@ -19,35 +19,46 @@ const Slideshow = ({ pictures }) => {
     );
     console.log(currentIndex);
   };
+  if (pictures.length > 1) {
+    return (
+      <div>
+        <div className="slideshow">
+          <img
+            className="slider"
+            src={pictures[currentIndex]}
+            alt={`Diapositive du logement`}
+          />
 
-  return (
-    <div>
+          <img
+            className="arrowLeft"
+            src={ArrowLeft}
+            alt={`Flèche de gauche`}
+            onClick={previousSlide}
+          />
+
+          <img
+            className="arrowRight"
+            src={ArrowRight}
+            alt={`Flèche de droite`}
+            onClick={nextSlide}
+          />
+          <p className="counter">
+            {currentIndex + 1}/{pictures.length}
+          </p>
+        </div>
+      </div>
+    );
+  } else {
+    return (
       <div className="slideshow">
         <img
           className="slider"
           src={pictures[currentIndex]}
           alt={`Diapositive du logement`}
         />
-
-        <img
-          className="arrowLeft"
-          src={ArrowLeft}
-          alt={`Flèche de gauche`}
-          onClick={previousSlide}
-        />
-
-        <img
-          className="arrowRight"
-          src={ArrowRight}
-          alt={`Flèche de droite`}
-          onClick={nextSlide}
-        />
-        <p className="counter">
-          {currentIndex + 1}/{pictures.length}
-        </p>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Slideshow;
