@@ -22,8 +22,7 @@ const Cards = () => {
   return (
     <div className="locationContainer">
       {location.map((card) => (
-        <div>
-          {" "}
+        <div key={`location-${card.id}`}>
           <Link to={`/FicheLogement/${card.id}`}>
             <div className="locationCard">
               <img

@@ -8,9 +8,9 @@ const Rating = ({ rating }) => {
   for (let i = 1; i <= 5; i++) {
     const starImg =
       i <= rating ? (
-        <img key={i} src={star} alt="Etoile pleine" />
+        <img key={`star-full-${i}`} src={star} alt="Etoile pleine" />
       ) : (
-        <img key={i} src={emptyStar} alt="Etoile vide" />
+        <img key={`star-empty-${i}`} src={emptyStar} alt="Etoile vide" />
       );
     stars.push(starImg);
   }
